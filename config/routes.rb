@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   root 'users#index'
 
   post 'import_from_excel' => "users#import_from_excel"
+
+  get "download_xl" => "users#download_xl"
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

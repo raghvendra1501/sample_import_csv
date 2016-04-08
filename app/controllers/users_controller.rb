@@ -26,6 +26,18 @@ class UsersController < ApplicationController
     end
   end
 
+
+  def download_xl
+    @users = User.all.to_xls(:only => [:first_name, :last_name], :header_columns => ['First Name', 'Last Name'], :column_width=> [30, 30])
+    respond_to do |format|
+      format.html
+      format.xls {
+        send_data @users, :filename => 'users.xls'    
+        return # prevet Rails to seek for index.xls.erb
+      }
+    end
+  end 
+
   # GET /users/1
   # GET /users/1.json
   def show

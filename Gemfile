@@ -36,6 +36,10 @@ gem 'roo'
 # @link https://github.com/roo-rb/roo-xls
 gem 'roo-xls'
 
+# conversion into excel
+# @link https://github.com/liangwenke/to_xls-rails
+gem 'to_xls-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
